@@ -16,7 +16,7 @@ pub fn main() !void {
     var context = neander.Context{};
 
     // here we write some instructions and data directly into the context's memory.
-    // this set of instructions will increment the value stored in 0x00 by 1 indefinitely.
+    // this set of instructions will increment the value stored in 0x08 by 1 indefinitely.
     const instruction = neander.CPU.Instruction;
     context.mem[0x00] = instruction.LDA;
     context.mem[0x01] = 0x08;
